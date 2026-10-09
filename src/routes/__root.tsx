@@ -1,12 +1,48 @@
-import { Link, createRootRoute } from "@tanstack/react-router";
+import {
+	HeadContent,
+	Outlet,
+	createRootRoute,
+	useRouterState,
+} from "@tanstack/react-router";
+import { AnimatePresence, motion } from "framer-motion";
+import { Footer } from "@/components/layout/Footer";
+import { Navbar } from "@/components/layout/Navbar";
+import { NotFound } from "@/components/layout/NotFound";
+import { pageHead } from "@/lib/seo";
+
+function RootLayout() {
+	const pathname = useRouterState({
+		select: (state) => state.location.pathname,
+	});
+
+	return (
+		<div className="flex min-h-screen flex-col bg-background text-foreground">
+			<HeadContent />
+			<Navbar />
+			<main className="flex-1">
+				<AnimatePresence mode="wait">
+					<motion.div
+						key={pathname}
+						initial={{ opacity: 0, y: 12 }}
+						animate={{ opacity: 1, y: 0 }}
+						exit={{ opacity: 0, y: -8 }}
+						transition={{ duration: 0.25, ease: "easeOut" }}
+					>
+						<Outlet />
+					</motion.div>
+				</AnimatePresence>
+			</main>
+			<Footer />
+		</div>
+	);
+}
 
 export const Route = createRootRoute({
-	notFoundComponent: () => {
-		return (
-			<div>
-				<p>This is the notFoundComponent configured on root route</p>
-				<Link to="/">Start Over</Link>
-			</div>
-		);
-	},
+	head: () =>
+		pageHead(
+			"Beranda",
+			"Wadah kolaborasi mahasiswa lintas jurusan untuk membangun bisnis bersama.",
+		),
+	component: RootLayout,
+	notFoundComponent: NotFound,
 });

@@ -1,0 +1,42 @@
+[
+	{
+		"id": "lb-001",
+		"judul": "Hackathon Nasional 2026",
+		"penyelenggara": "Kemendikbud",
+		"kategori": "Hackathon",
+		"tag": ["coding", "nasional"],
+		"deadline": "2026-11-10",
+		"link": "https://example.com/hackathon",
+		"deskripsi": "Kompetisi coding 48 jam mahasiswa Indonesia."
+	},
+	{
+		"id": "lb-002",
+		"judul": "Lomba Desain Poster Digital",
+		"penyelenggara": "Universitas Brawijaya",
+		"kategori": "Desain",
+		"tag": ["poster", "digital"],
+		"deadline": "2026-11-25",
+		"link": "https://example.com/poster",
+		"deskripsi": "Tema: Sustainable Future. Hadiah 10 juta."
+	},
+	{
+		"id": "lb-003",
+		"judul": "Business Plan Competition",
+		"penyelenggara": "Bank Indonesia",
+		"kategori": "Bisnis",
+		"tag": ["startup", "bisnis"],
+		"deadline": "2026-12-05",
+		"link": "https://example.com/bpc",
+		"deskripsi": "Kompetisi rencana bisnis mahasiswa."
+	},
+	{
+		"id": "lb-004",
+		"judul": "UI/UX Design Challenge",
+		"penyelenggara": "Gojek",
+		"kategori": "Desain",
+		"tag": ["ui", "ux"],
+		"deadline": "2026-11-18",
+		"link": "https://example.com/uiux",
+		"deskripsi": "Redesign aplikasi transportasi publik."
+	}
+]

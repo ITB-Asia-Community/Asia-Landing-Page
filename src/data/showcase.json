@@ -1,0 +1,46 @@
+[
+	{
+		"id": "sh-001",
+		"judul": "Aplikasi Kas RT Digital",
+		"pembuat": "mbr-001",
+		"pembuatNama": "Tim ITB Asia Dev",
+		"kategori": "Web App",
+		"tag": ["react", "firebase"],
+		"link": "https://example.com/kasrt",
+		"deskripsi": "Aplikasi pencatatan kas RT berbasis web.",
+		"gambar": "https://placehold.co/600x400/1a1a1a/ffffff?text=Kas+RT"
+	},
+	{
+		"id": "sh-002",
+		"judul": "Portfolio Fotografi Kampus",
+		"pembuat": "mbr-002",
+		"pembuatNama": "Andi",
+		"kategori": "Portfolio",
+		"tag": ["fotografi"],
+		"link": "https://example.com/foto",
+		"deskripsi": "Website portfolio fotografi dengan galeri.",
+		"gambar": "https://placehold.co/600x400/1a1a1a/ffffff?text=Fotografi"
+	},
+	{
+		"id": "sh-003",
+		"judul": "Bot Discord Jadwal Kuliah",
+		"pembuat": "mbr-003",
+		"pembuatNama": "Sari",
+		"kategori": "Bot",
+		"tag": ["discord", "bot"],
+		"link": "https://example.com/bot",
+		"deskripsi": "Bot Discord reminder jadwal kuliah.",
+		"gambar": "https://placehold.co/600x400/1a1a1a/ffffff?text=Bot+Discord"
+	},
+	{
+		"id": "sh-004",
+		"judul": "Landing Page UMKM Kopi",
+		"pembuat": "mbr-001",
+		"pembuatNama": "Rizky",
+		"kategori": "Landing Page",
+		"tag": ["landing", "umkm"],
+		"link": "https://example.com/kopi",
+		"deskripsi": "Landing page untuk UMKM kopi lokal.",
+		"gambar": "https://placehold.co/600x400/1a1a1a/ffffff?text=Kopi"
+	}
+]

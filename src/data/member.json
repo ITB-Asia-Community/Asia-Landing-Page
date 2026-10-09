@@ -1,0 +1,38 @@
+[
+	{
+		"id": "mbr-001",
+		"nama": "Rizky Pratama",
+		"jurusan": "Informatika",
+		"skill": ["React", "UI Design"],
+		"bio": "Suka bikin UI dan belajar bisnis.",
+		"github": "https://github.com/rizky",
+		"portfolio": "https://rizky.dev"
+	},
+	{
+		"id": "mbr-002",
+		"nama": "Dina Maharani",
+		"jurusan": "Sistem Informasi",
+		"skill": ["UI/UX", "Figma"],
+		"bio": "Desainer yang suka riset pengguna.",
+		"github": "https://github.com/dina",
+		"portfolio": "https://dina.design"
+	},
+	{
+		"id": "mbr-003",
+		"nama": "Fajar Nugroho",
+		"jurusan": "Manajemen",
+		"skill": ["Bisnis", "Marketing"],
+		"bio": "Tertarik bangun startup dari kampus.",
+		"github": "https://github.com/fajar",
+		"portfolio": "https://fajar.co"
+	},
+	{
+		"id": "mbr-004",
+		"nama": "Sari Wulandari",
+		"jurusan": "Informatika",
+		"skill": ["Python", "Bot Dev"],
+		"bio": "Suka bikin bot dan automasi.",
+		"github": "https://github.com/sari",
+		"portfolio": "https://sari.dev"
+	}
+]

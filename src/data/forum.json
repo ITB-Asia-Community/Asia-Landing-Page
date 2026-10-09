@@ -1,0 +1,38 @@
+[
+	{
+		"id": "fr-001",
+		"judul": "Cara cari klien freelance pertama?",
+		"author": "mbr-001",
+		"authorNama": "Rizky",
+		"replyCount": 12,
+		"tag": ["freelance"],
+		"isi": "Halo semua, saya baru mulai freelance desain. Ada tips cari klien pertama?"
+	},
+	{
+		"id": "fr-002",
+		"judul": "Rekomendasi stack untuk project kolaborasi",
+		"author": "mbr-002",
+		"authorNama": "Dina",
+		"replyCount": 8,
+		"tag": ["tech"],
+		"isi": "Kita mau bikin project bareng lintas jurusan. Stack apa yang cocok?"
+	},
+	{
+		"id": "fr-003",
+		"judul": "Sharing: pengalaman ikut business plan",
+		"author": "mbr-003",
+		"authorNama": "Fajar",
+		"replyCount": 5,
+		"tag": ["bisnis"],
+		"isi": "Minggu lalu saya ikut BPC. Mau sharing pengalaman."
+	},
+	{
+		"id": "fr-004",
+		"judul": "Cari teman belajar React",
+		"author": "mbr-004",
+		"authorNama": "Sari",
+		"replyCount": 15,
+		"tag": ["react", "belajar"],
+		"isi": "Ada yang mau belajar React bareng?"
+	}
+]

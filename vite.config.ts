@@ -21,4 +21,7 @@ export default defineConfig({
 			"@": path.resolve(import.meta.dirname, "./src"),
 		},
 	},
+	server: {
+		allowedHosts: [".monkeycode-ai.live"],
+	},
 });

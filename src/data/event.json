@@ -1,0 +1,38 @@
+[
+	{
+		"id": "ev-001",
+		"judul": "Workshop Freelancing 101",
+		"tanggal": "2026-10-20",
+		"lokasi": "Online (Zoom)",
+		"kategori": "Workshop",
+		"tag": ["freelance", "karier"],
+		"deskripsi": "Belajar mulai freelance dari nol."
+	},
+	{
+		"id": "ev-002",
+		"judul": "Meetup Komunitas ITB Asia",
+		"tanggal": "2026-10-28",
+		"lokasi": "Kafe Kopi Senja, Malang",
+		"kategori": "Meetup",
+		"tag": ["networking"],
+		"deskripsi": "Ngobrol santai bareng member komunitas."
+	},
+	{
+		"id": "ev-003",
+		"judul": "Webinar: Bangun Startup dari Kampus",
+		"tanggal": "2026-11-05",
+		"lokasi": "Online (Google Meet)",
+		"kategori": "Webinar",
+		"tag": ["startup"],
+		"deskripsi": "Narasumber: founder startup kampus."
+	},
+	{
+		"id": "ev-004",
+		"judul": "Workshop Git & GitHub",
+		"tanggal": "2026-11-12",
+		"lokasi": "Lab Komputer ITB Asia",
+		"kategori": "Workshop",
+		"tag": ["git", "coding"],
+		"deskripsi": "Belajar kolaborasi kode dengan Git."
+	}
+]
