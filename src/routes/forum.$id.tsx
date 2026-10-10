@@ -26,13 +26,7 @@ function ForumDetailPage() {
 
 	if (query.isLoading) {
 		return (
-			<PageShell
-				title="Memuat..."
-				crumbs={[
-					{ label: "Home", to: "/" },
-					{ label: "Forum", to: "/forum" },
-				]}
-			>
+			<PageShell title="Memuat...">
 				<p className="text-sm text-muted-foreground">Memuat thread...</p>
 			</PageShell>
 		);
@@ -40,13 +34,7 @@ function ForumDetailPage() {
 
 	if (query.isError) {
 		return (
-			<PageShell
-				title="Forum"
-				crumbs={[
-					{ label: "Home", to: "/" },
-					{ label: "Forum", to: "/forum" },
-				]}
-			>
+			<PageShell title="Forum">
 				<ErrorState onRetry={() => void query.refetch()} />
 			</PageShell>
 		);
@@ -54,13 +42,7 @@ function ForumDetailPage() {
 
 	if (!item) {
 		return (
-			<PageShell
-				title="Tidak ditemukan"
-				crumbs={[
-					{ label: "Home", to: "/" },
-					{ label: "Forum", to: "/forum" },
-				]}
-			>
+			<PageShell title="Tidak ditemukan">
 				<ErrorState
 					title="Thread tidak ditemukan"
 					description="Item ini tidak ada di data dummy."
@@ -72,11 +54,6 @@ function ForumDetailPage() {
 	return (
 		<PageShell
 			title={item.judul}
-			crumbs={[
-				{ label: "Home", to: "/" },
-				{ label: "Forum", to: "/forum" },
-				{ label: item.judul },
-			]}
 			actions={<ShareButton title={item.judul} />}
 		>
 			<Card>

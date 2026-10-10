@@ -17,6 +17,7 @@ export const Route = createFileRoute("/freelance/$id")({
 		return pageHead(
 			item?.judul ?? "Freelance tidak ditemukan",
 			item?.deskripsi ?? "Detail pekerjaan lepas ITB Asia Community.",
+			item?.gambar,
 		);
 	},
 	component: FreelanceDetailPage,
@@ -29,13 +30,7 @@ function FreelanceDetailPage() {
 
 	if (query.isLoading) {
 		return (
-			<PageShell
-				title="Memuat..."
-				crumbs={[
-					{ label: "Home", to: "/" },
-					{ label: "Freelance", to: "/freelance" },
-				]}
-			>
+			<PageShell title="Memuat...">
 				<p className="text-sm text-muted-foreground">
 					Memuat detail freelance...
 				</p>
@@ -45,13 +40,7 @@ function FreelanceDetailPage() {
 
 	if (query.isError) {
 		return (
-			<PageShell
-				title="Freelance"
-				crumbs={[
-					{ label: "Home", to: "/" },
-					{ label: "Freelance", to: "/freelance" },
-				]}
-			>
+			<PageShell title="Freelance">
 				<ErrorState onRetry={() => void query.refetch()} />
 			</PageShell>
 		);
@@ -59,13 +48,7 @@ function FreelanceDetailPage() {
 
 	if (!item) {
 		return (
-			<PageShell
-				title="Tidak ditemukan"
-				crumbs={[
-					{ label: "Home", to: "/" },
-					{ label: "Freelance", to: "/freelance" },
-				]}
-			>
+			<PageShell title="Tidak ditemukan">
 				<ErrorState
 					title="Freelance tidak ditemukan"
 					description="Item ini tidak ada di data dummy."
@@ -78,19 +61,19 @@ function FreelanceDetailPage() {
 		<PageShell
 			title={item.judul}
 			description={item.deskripsi}
-			crumbs={[
-				{ label: "Home", to: "/" },
-				{ label: "Freelance", to: "/freelance" },
-				{ label: item.judul },
-			]}
 			actions={<ShareButton title={item.judul} />}
 		>
-			<Card>
-				<CardHeader className="flex flex-row flex-wrap items-center gap-2">
+			<Card className="overflow-hidden py-0">
+				<img
+					src={item.gambar}
+					alt={item.judul}
+					className="aspect-[16/8] w-full object-cover"
+				/>
+				<CardHeader className="flex flex-row flex-wrap items-center gap-2 pt-5">
 					<Badge variant="secondary">{item.kategori}</Badge>
 					<CardTitle className="sr-only">{item.judul}</CardTitle>
 				</CardHeader>
-				<CardContent className="space-y-4">
+				<CardContent className="space-y-4 pb-6">
 					<p className="text-sm leading-relaxed">{item.deskripsi}</p>
 					<p className="text-sm text-muted-foreground">
 						Deadline {formatDate(item.deadline)} ·{" "}

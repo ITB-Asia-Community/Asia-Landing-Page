@@ -8,445 +8,445 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from "./routes/__root";
-import { Route as IndexRouteImport } from "./routes/index";
-import { Route as R404RouteImport } from "./routes/404";
-import { Route as AboutRouteImport } from "./routes/about";
-import { Route as CaraGabungRouteImport } from "./routes/cara-gabung";
-import { Route as EventRouteImport } from "./routes/event";
-import { Route as ForumRouteImport } from "./routes/forum";
-import { Route as FreelanceRouteImport } from "./routes/freelance";
-import { Route as KolaboratorRouteImport } from "./routes/kolaborator";
-import { Route as LombaRouteImport } from "./routes/lomba";
-import { Route as MemberRouteImport } from "./routes/member";
-import { Route as ShowcaseRouteImport } from "./routes/showcase";
-import { Route as EventIdRouteImport } from "./routes/event.$id";
-import { Route as ForumIdRouteImport } from "./routes/forum.$id";
-import { Route as FreelanceIdRouteImport } from "./routes/freelance.$id";
-import { Route as LombaIdRouteImport } from "./routes/lomba.$id";
-import { Route as MemberIdRouteImport } from "./routes/member.$id";
-import { Route as ShowcaseIdRouteImport } from "./routes/showcase.$id";
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as IndexRouteImport } from './routes/index'
+import { Route as R404RouteImport } from './routes/404'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as CaraGabungRouteImport } from './routes/cara-gabung'
+import { Route as EventRouteImport } from './routes/event'
+import { Route as ForumRouteImport } from './routes/forum'
+import { Route as FreelanceRouteImport } from './routes/freelance'
+import { Route as KolaboratorRouteImport } from './routes/kolaborator'
+import { Route as LombaRouteImport } from './routes/lomba'
+import { Route as MemberRouteImport } from './routes/member'
+import { Route as ShowcaseRouteImport } from './routes/showcase'
+import { Route as EventIdRouteImport } from './routes/event.$id'
+import { Route as ForumIdRouteImport } from './routes/forum.$id'
+import { Route as FreelanceIdRouteImport } from './routes/freelance.$id'
+import { Route as LombaIdRouteImport } from './routes/lomba.$id'
+import { Route as MemberIdRouteImport } from './routes/member.$id'
+import { Route as ShowcaseIdRouteImport } from './routes/showcase.$id'
 
 const IndexRoute = IndexRouteImport.update({
-	id: "/",
-	path: "/",
-	getParentRoute: () => rootRouteImport,
-} as any);
+  id: '/',
+  path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const R404Route = R404RouteImport.update({
-	id: "/404",
-	path: "/404",
-	getParentRoute: () => rootRouteImport,
-} as any);
+  id: '/404',
+  path: '/404',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
-	id: "/about",
-	path: "/about",
-	getParentRoute: () => rootRouteImport,
-} as any);
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CaraGabungRoute = CaraGabungRouteImport.update({
-	id: "/cara-gabung",
-	path: "/cara-gabung",
-	getParentRoute: () => rootRouteImport,
-} as any);
+  id: '/cara-gabung',
+  path: '/cara-gabung',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EventRoute = EventRouteImport.update({
-	id: "/event",
-	path: "/event",
-	getParentRoute: () => rootRouteImport,
-} as any);
+  id: '/event',
+  path: '/event',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ForumRoute = ForumRouteImport.update({
-	id: "/forum",
-	path: "/forum",
-	getParentRoute: () => rootRouteImport,
-} as any);
+  id: '/forum',
+  path: '/forum',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FreelanceRoute = FreelanceRouteImport.update({
-	id: "/freelance",
-	path: "/freelance",
-	getParentRoute: () => rootRouteImport,
-} as any);
+  id: '/freelance',
+  path: '/freelance',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const KolaboratorRoute = KolaboratorRouteImport.update({
-	id: "/kolaborator",
-	path: "/kolaborator",
-	getParentRoute: () => rootRouteImport,
-} as any);
+  id: '/kolaborator',
+  path: '/kolaborator',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LombaRoute = LombaRouteImport.update({
-	id: "/lomba",
-	path: "/lomba",
-	getParentRoute: () => rootRouteImport,
-} as any);
+  id: '/lomba',
+  path: '/lomba',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MemberRoute = MemberRouteImport.update({
-	id: "/member",
-	path: "/member",
-	getParentRoute: () => rootRouteImport,
-} as any);
+  id: '/member',
+  path: '/member',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ShowcaseRoute = ShowcaseRouteImport.update({
-	id: "/showcase",
-	path: "/showcase",
-	getParentRoute: () => rootRouteImport,
-} as any);
+  id: '/showcase',
+  path: '/showcase',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EventIdRoute = EventIdRouteImport.update({
-	id: "/$id",
-	path: "/$id",
-	getParentRoute: () => EventRoute,
-} as any);
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => EventRoute,
+} as any)
 const ForumIdRoute = ForumIdRouteImport.update({
-	id: "/$id",
-	path: "/$id",
-	getParentRoute: () => ForumRoute,
-} as any);
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => ForumRoute,
+} as any)
 const FreelanceIdRoute = FreelanceIdRouteImport.update({
-	id: "/$id",
-	path: "/$id",
-	getParentRoute: () => FreelanceRoute,
-} as any);
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => FreelanceRoute,
+} as any)
 const LombaIdRoute = LombaIdRouteImport.update({
-	id: "/$id",
-	path: "/$id",
-	getParentRoute: () => LombaRoute,
-} as any);
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => LombaRoute,
+} as any)
 const MemberIdRoute = MemberIdRouteImport.update({
-	id: "/$id",
-	path: "/$id",
-	getParentRoute: () => MemberRoute,
-} as any);
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => MemberRoute,
+} as any)
 const ShowcaseIdRoute = ShowcaseIdRouteImport.update({
-	id: "/$id",
-	path: "/$id",
-	getParentRoute: () => ShowcaseRoute,
-} as any);
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => ShowcaseRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
-	"/": typeof IndexRoute;
-	"/404": typeof R404Route;
-	"/about": typeof AboutRoute;
-	"/cara-gabung": typeof CaraGabungRoute;
-	"/event": typeof EventRouteWithChildren;
-	"/forum": typeof ForumRouteWithChildren;
-	"/freelance": typeof FreelanceRouteWithChildren;
-	"/kolaborator": typeof KolaboratorRoute;
-	"/lomba": typeof LombaRouteWithChildren;
-	"/member": typeof MemberRouteWithChildren;
-	"/showcase": typeof ShowcaseRouteWithChildren;
-	"/event/$id": typeof EventIdRoute;
-	"/forum/$id": typeof ForumIdRoute;
-	"/freelance/$id": typeof FreelanceIdRoute;
-	"/lomba/$id": typeof LombaIdRoute;
-	"/member/$id": typeof MemberIdRoute;
-	"/showcase/$id": typeof ShowcaseIdRoute;
+  '/': typeof IndexRoute
+  '/404': typeof R404Route
+  '/about': typeof AboutRoute
+  '/cara-gabung': typeof CaraGabungRoute
+  '/event': typeof EventRouteWithChildren
+  '/forum': typeof ForumRouteWithChildren
+  '/freelance': typeof FreelanceRouteWithChildren
+  '/kolaborator': typeof KolaboratorRoute
+  '/lomba': typeof LombaRouteWithChildren
+  '/member': typeof MemberRouteWithChildren
+  '/showcase': typeof ShowcaseRouteWithChildren
+  '/event/$id': typeof EventIdRoute
+  '/forum/$id': typeof ForumIdRoute
+  '/freelance/$id': typeof FreelanceIdRoute
+  '/lomba/$id': typeof LombaIdRoute
+  '/member/$id': typeof MemberIdRoute
+  '/showcase/$id': typeof ShowcaseIdRoute
 }
 export interface FileRoutesByTo {
-	"/": typeof IndexRoute;
-	"/404": typeof R404Route;
-	"/about": typeof AboutRoute;
-	"/cara-gabung": typeof CaraGabungRoute;
-	"/event": typeof EventRouteWithChildren;
-	"/forum": typeof ForumRouteWithChildren;
-	"/freelance": typeof FreelanceRouteWithChildren;
-	"/kolaborator": typeof KolaboratorRoute;
-	"/lomba": typeof LombaRouteWithChildren;
-	"/member": typeof MemberRouteWithChildren;
-	"/showcase": typeof ShowcaseRouteWithChildren;
-	"/event/$id": typeof EventIdRoute;
-	"/forum/$id": typeof ForumIdRoute;
-	"/freelance/$id": typeof FreelanceIdRoute;
-	"/lomba/$id": typeof LombaIdRoute;
-	"/member/$id": typeof MemberIdRoute;
-	"/showcase/$id": typeof ShowcaseIdRoute;
+  '/': typeof IndexRoute
+  '/404': typeof R404Route
+  '/about': typeof AboutRoute
+  '/cara-gabung': typeof CaraGabungRoute
+  '/event': typeof EventRouteWithChildren
+  '/forum': typeof ForumRouteWithChildren
+  '/freelance': typeof FreelanceRouteWithChildren
+  '/kolaborator': typeof KolaboratorRoute
+  '/lomba': typeof LombaRouteWithChildren
+  '/member': typeof MemberRouteWithChildren
+  '/showcase': typeof ShowcaseRouteWithChildren
+  '/event/$id': typeof EventIdRoute
+  '/forum/$id': typeof ForumIdRoute
+  '/freelance/$id': typeof FreelanceIdRoute
+  '/lomba/$id': typeof LombaIdRoute
+  '/member/$id': typeof MemberIdRoute
+  '/showcase/$id': typeof ShowcaseIdRoute
 }
 export interface FileRoutesById {
-	__root__: typeof rootRouteImport;
-	"/": typeof IndexRoute;
-	"/404": typeof R404Route;
-	"/about": typeof AboutRoute;
-	"/cara-gabung": typeof CaraGabungRoute;
-	"/event": typeof EventRouteWithChildren;
-	"/forum": typeof ForumRouteWithChildren;
-	"/freelance": typeof FreelanceRouteWithChildren;
-	"/kolaborator": typeof KolaboratorRoute;
-	"/lomba": typeof LombaRouteWithChildren;
-	"/member": typeof MemberRouteWithChildren;
-	"/showcase": typeof ShowcaseRouteWithChildren;
-	"/event/$id": typeof EventIdRoute;
-	"/forum/$id": typeof ForumIdRoute;
-	"/freelance/$id": typeof FreelanceIdRoute;
-	"/lomba/$id": typeof LombaIdRoute;
-	"/member/$id": typeof MemberIdRoute;
-	"/showcase/$id": typeof ShowcaseIdRoute;
+  __root__: typeof rootRouteImport
+  '/': typeof IndexRoute
+  '/404': typeof R404Route
+  '/about': typeof AboutRoute
+  '/cara-gabung': typeof CaraGabungRoute
+  '/event': typeof EventRouteWithChildren
+  '/forum': typeof ForumRouteWithChildren
+  '/freelance': typeof FreelanceRouteWithChildren
+  '/kolaborator': typeof KolaboratorRoute
+  '/lomba': typeof LombaRouteWithChildren
+  '/member': typeof MemberRouteWithChildren
+  '/showcase': typeof ShowcaseRouteWithChildren
+  '/event/$id': typeof EventIdRoute
+  '/forum/$id': typeof ForumIdRoute
+  '/freelance/$id': typeof FreelanceIdRoute
+  '/lomba/$id': typeof LombaIdRoute
+  '/member/$id': typeof MemberIdRoute
+  '/showcase/$id': typeof ShowcaseIdRoute
 }
 export interface FileRouteTypes {
-	fileRoutesByFullPath: FileRoutesByFullPath;
-	fullPaths:
-		| "/"
-		| "/404"
-		| "/about"
-		| "/cara-gabung"
-		| "/event"
-		| "/forum"
-		| "/freelance"
-		| "/kolaborator"
-		| "/lomba"
-		| "/member"
-		| "/showcase"
-		| "/event/$id"
-		| "/forum/$id"
-		| "/freelance/$id"
-		| "/lomba/$id"
-		| "/member/$id"
-		| "/showcase/$id";
-	fileRoutesByTo: FileRoutesByTo;
-	to:
-		| "/"
-		| "/404"
-		| "/about"
-		| "/cara-gabung"
-		| "/event"
-		| "/forum"
-		| "/freelance"
-		| "/kolaborator"
-		| "/lomba"
-		| "/member"
-		| "/showcase"
-		| "/event/$id"
-		| "/forum/$id"
-		| "/freelance/$id"
-		| "/lomba/$id"
-		| "/member/$id"
-		| "/showcase/$id";
-	id:
-		| "__root__"
-		| "/"
-		| "/404"
-		| "/about"
-		| "/cara-gabung"
-		| "/event"
-		| "/forum"
-		| "/freelance"
-		| "/kolaborator"
-		| "/lomba"
-		| "/member"
-		| "/showcase"
-		| "/event/$id"
-		| "/forum/$id"
-		| "/freelance/$id"
-		| "/lomba/$id"
-		| "/member/$id"
-		| "/showcase/$id";
-	fileRoutesById: FileRoutesById;
+  fileRoutesByFullPath: FileRoutesByFullPath
+  fullPaths:
+    | '/'
+    | '/404'
+    | '/about'
+    | '/cara-gabung'
+    | '/event'
+    | '/forum'
+    | '/freelance'
+    | '/kolaborator'
+    | '/lomba'
+    | '/member'
+    | '/showcase'
+    | '/event/$id'
+    | '/forum/$id'
+    | '/freelance/$id'
+    | '/lomba/$id'
+    | '/member/$id'
+    | '/showcase/$id'
+  fileRoutesByTo: FileRoutesByTo
+  to:
+    | '/'
+    | '/404'
+    | '/about'
+    | '/cara-gabung'
+    | '/event'
+    | '/forum'
+    | '/freelance'
+    | '/kolaborator'
+    | '/lomba'
+    | '/member'
+    | '/showcase'
+    | '/event/$id'
+    | '/forum/$id'
+    | '/freelance/$id'
+    | '/lomba/$id'
+    | '/member/$id'
+    | '/showcase/$id'
+  id:
+    | '__root__'
+    | '/'
+    | '/404'
+    | '/about'
+    | '/cara-gabung'
+    | '/event'
+    | '/forum'
+    | '/freelance'
+    | '/kolaborator'
+    | '/lomba'
+    | '/member'
+    | '/showcase'
+    | '/event/$id'
+    | '/forum/$id'
+    | '/freelance/$id'
+    | '/lomba/$id'
+    | '/member/$id'
+    | '/showcase/$id'
+  fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-	IndexRoute: typeof IndexRoute;
-	R404Route: typeof R404Route;
-	AboutRoute: typeof AboutRoute;
-	CaraGabungRoute: typeof CaraGabungRoute;
-	EventRoute: typeof EventRouteWithChildren;
-	ForumRoute: typeof ForumRouteWithChildren;
-	FreelanceRoute: typeof FreelanceRouteWithChildren;
-	KolaboratorRoute: typeof KolaboratorRoute;
-	LombaRoute: typeof LombaRouteWithChildren;
-	MemberRoute: typeof MemberRouteWithChildren;
-	ShowcaseRoute: typeof ShowcaseRouteWithChildren;
+  IndexRoute: typeof IndexRoute
+  R404Route: typeof R404Route
+  AboutRoute: typeof AboutRoute
+  CaraGabungRoute: typeof CaraGabungRoute
+  EventRoute: typeof EventRouteWithChildren
+  ForumRoute: typeof ForumRouteWithChildren
+  FreelanceRoute: typeof FreelanceRouteWithChildren
+  KolaboratorRoute: typeof KolaboratorRoute
+  LombaRoute: typeof LombaRouteWithChildren
+  MemberRoute: typeof MemberRouteWithChildren
+  ShowcaseRoute: typeof ShowcaseRouteWithChildren
 }
 
-declare module "@tanstack/react-router" {
-	interface FileRoutesByPath {
-		"/": {
-			id: "/";
-			path: "/";
-			fullPath: "/";
-			preLoaderRoute: typeof IndexRouteImport;
-			parentRoute: typeof rootRouteImport;
-		};
-		"/404": {
-			id: "/404";
-			path: "/404";
-			fullPath: "/404";
-			preLoaderRoute: typeof R404RouteImport;
-			parentRoute: typeof rootRouteImport;
-		};
-		"/about": {
-			id: "/about";
-			path: "/about";
-			fullPath: "/about";
-			preLoaderRoute: typeof AboutRouteImport;
-			parentRoute: typeof rootRouteImport;
-		};
-		"/cara-gabung": {
-			id: "/cara-gabung";
-			path: "/cara-gabung";
-			fullPath: "/cara-gabung";
-			preLoaderRoute: typeof CaraGabungRouteImport;
-			parentRoute: typeof rootRouteImport;
-		};
-		"/event": {
-			id: "/event";
-			path: "/event";
-			fullPath: "/event";
-			preLoaderRoute: typeof EventRouteImport;
-			parentRoute: typeof rootRouteImport;
-		};
-		"/forum": {
-			id: "/forum";
-			path: "/forum";
-			fullPath: "/forum";
-			preLoaderRoute: typeof ForumRouteImport;
-			parentRoute: typeof rootRouteImport;
-		};
-		"/freelance": {
-			id: "/freelance";
-			path: "/freelance";
-			fullPath: "/freelance";
-			preLoaderRoute: typeof FreelanceRouteImport;
-			parentRoute: typeof rootRouteImport;
-		};
-		"/kolaborator": {
-			id: "/kolaborator";
-			path: "/kolaborator";
-			fullPath: "/kolaborator";
-			preLoaderRoute: typeof KolaboratorRouteImport;
-			parentRoute: typeof rootRouteImport;
-		};
-		"/lomba": {
-			id: "/lomba";
-			path: "/lomba";
-			fullPath: "/lomba";
-			preLoaderRoute: typeof LombaRouteImport;
-			parentRoute: typeof rootRouteImport;
-		};
-		"/member": {
-			id: "/member";
-			path: "/member";
-			fullPath: "/member";
-			preLoaderRoute: typeof MemberRouteImport;
-			parentRoute: typeof rootRouteImport;
-		};
-		"/showcase": {
-			id: "/showcase";
-			path: "/showcase";
-			fullPath: "/showcase";
-			preLoaderRoute: typeof ShowcaseRouteImport;
-			parentRoute: typeof rootRouteImport;
-		};
-		"/event/$id": {
-			id: "/event/$id";
-			path: "/$id";
-			fullPath: "/event/$id";
-			preLoaderRoute: typeof EventIdRouteImport;
-			parentRoute: typeof EventRoute;
-		};
-		"/forum/$id": {
-			id: "/forum/$id";
-			path: "/$id";
-			fullPath: "/forum/$id";
-			preLoaderRoute: typeof ForumIdRouteImport;
-			parentRoute: typeof ForumRoute;
-		};
-		"/freelance/$id": {
-			id: "/freelance/$id";
-			path: "/$id";
-			fullPath: "/freelance/$id";
-			preLoaderRoute: typeof FreelanceIdRouteImport;
-			parentRoute: typeof FreelanceRoute;
-		};
-		"/lomba/$id": {
-			id: "/lomba/$id";
-			path: "/$id";
-			fullPath: "/lomba/$id";
-			preLoaderRoute: typeof LombaIdRouteImport;
-			parentRoute: typeof LombaRoute;
-		};
-		"/member/$id": {
-			id: "/member/$id";
-			path: "/$id";
-			fullPath: "/member/$id";
-			preLoaderRoute: typeof MemberIdRouteImport;
-			parentRoute: typeof MemberRoute;
-		};
-		"/showcase/$id": {
-			id: "/showcase/$id";
-			path: "/$id";
-			fullPath: "/showcase/$id";
-			preLoaderRoute: typeof ShowcaseIdRouteImport;
-			parentRoute: typeof ShowcaseRoute;
-		};
-	}
+declare module '@tanstack/react-router' {
+  interface FileRoutesByPath {
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/404': {
+      id: '/404'
+      path: '/404'
+      fullPath: '/404'
+      preLoaderRoute: typeof R404RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cara-gabung': {
+      id: '/cara-gabung'
+      path: '/cara-gabung'
+      fullPath: '/cara-gabung'
+      preLoaderRoute: typeof CaraGabungRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/event': {
+      id: '/event'
+      path: '/event'
+      fullPath: '/event'
+      preLoaderRoute: typeof EventRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/forum': {
+      id: '/forum'
+      path: '/forum'
+      fullPath: '/forum'
+      preLoaderRoute: typeof ForumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/freelance': {
+      id: '/freelance'
+      path: '/freelance'
+      fullPath: '/freelance'
+      preLoaderRoute: typeof FreelanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kolaborator': {
+      id: '/kolaborator'
+      path: '/kolaborator'
+      fullPath: '/kolaborator'
+      preLoaderRoute: typeof KolaboratorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lomba': {
+      id: '/lomba'
+      path: '/lomba'
+      fullPath: '/lomba'
+      preLoaderRoute: typeof LombaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/member': {
+      id: '/member'
+      path: '/member'
+      fullPath: '/member'
+      preLoaderRoute: typeof MemberRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/showcase': {
+      id: '/showcase'
+      path: '/showcase'
+      fullPath: '/showcase'
+      preLoaderRoute: typeof ShowcaseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/event/$id': {
+      id: '/event/$id'
+      path: '/$id'
+      fullPath: '/event/$id'
+      preLoaderRoute: typeof EventIdRouteImport
+      parentRoute: typeof EventRoute
+    }
+    '/forum/$id': {
+      id: '/forum/$id'
+      path: '/$id'
+      fullPath: '/forum/$id'
+      preLoaderRoute: typeof ForumIdRouteImport
+      parentRoute: typeof ForumRoute
+    }
+    '/freelance/$id': {
+      id: '/freelance/$id'
+      path: '/$id'
+      fullPath: '/freelance/$id'
+      preLoaderRoute: typeof FreelanceIdRouteImport
+      parentRoute: typeof FreelanceRoute
+    }
+    '/lomba/$id': {
+      id: '/lomba/$id'
+      path: '/$id'
+      fullPath: '/lomba/$id'
+      preLoaderRoute: typeof LombaIdRouteImport
+      parentRoute: typeof LombaRoute
+    }
+    '/member/$id': {
+      id: '/member/$id'
+      path: '/$id'
+      fullPath: '/member/$id'
+      preLoaderRoute: typeof MemberIdRouteImport
+      parentRoute: typeof MemberRoute
+    }
+    '/showcase/$id': {
+      id: '/showcase/$id'
+      path: '/$id'
+      fullPath: '/showcase/$id'
+      preLoaderRoute: typeof ShowcaseIdRouteImport
+      parentRoute: typeof ShowcaseRoute
+    }
+  }
 }
 
 interface EventRouteChildren {
-	EventIdRoute: typeof EventIdRoute;
+  EventIdRoute: typeof EventIdRoute
 }
 
 const EventRouteChildren: EventRouteChildren = {
-	EventIdRoute: EventIdRoute,
-};
+  EventIdRoute: EventIdRoute,
+}
 
-const EventRouteWithChildren = EventRoute._addFileChildren(EventRouteChildren);
+const EventRouteWithChildren = EventRoute._addFileChildren(EventRouteChildren)
 
 interface ForumRouteChildren {
-	ForumIdRoute: typeof ForumIdRoute;
+  ForumIdRoute: typeof ForumIdRoute
 }
 
 const ForumRouteChildren: ForumRouteChildren = {
-	ForumIdRoute: ForumIdRoute,
-};
+  ForumIdRoute: ForumIdRoute,
+}
 
-const ForumRouteWithChildren = ForumRoute._addFileChildren(ForumRouteChildren);
+const ForumRouteWithChildren = ForumRoute._addFileChildren(ForumRouteChildren)
 
 interface FreelanceRouteChildren {
-	FreelanceIdRoute: typeof FreelanceIdRoute;
+  FreelanceIdRoute: typeof FreelanceIdRoute
 }
 
 const FreelanceRouteChildren: FreelanceRouteChildren = {
-	FreelanceIdRoute: FreelanceIdRoute,
-};
+  FreelanceIdRoute: FreelanceIdRoute,
+}
 
 const FreelanceRouteWithChildren = FreelanceRoute._addFileChildren(
-	FreelanceRouteChildren,
-);
+  FreelanceRouteChildren,
+)
 
 interface LombaRouteChildren {
-	LombaIdRoute: typeof LombaIdRoute;
+  LombaIdRoute: typeof LombaIdRoute
 }
 
 const LombaRouteChildren: LombaRouteChildren = {
-	LombaIdRoute: LombaIdRoute,
-};
+  LombaIdRoute: LombaIdRoute,
+}
 
-const LombaRouteWithChildren = LombaRoute._addFileChildren(LombaRouteChildren);
+const LombaRouteWithChildren = LombaRoute._addFileChildren(LombaRouteChildren)
 
 interface MemberRouteChildren {
-	MemberIdRoute: typeof MemberIdRoute;
+  MemberIdRoute: typeof MemberIdRoute
 }
 
 const MemberRouteChildren: MemberRouteChildren = {
-	MemberIdRoute: MemberIdRoute,
-};
+  MemberIdRoute: MemberIdRoute,
+}
 
 const MemberRouteWithChildren =
-	MemberRoute._addFileChildren(MemberRouteChildren);
+  MemberRoute._addFileChildren(MemberRouteChildren)
 
 interface ShowcaseRouteChildren {
-	ShowcaseIdRoute: typeof ShowcaseIdRoute;
+  ShowcaseIdRoute: typeof ShowcaseIdRoute
 }
 
 const ShowcaseRouteChildren: ShowcaseRouteChildren = {
-	ShowcaseIdRoute: ShowcaseIdRoute,
-};
+  ShowcaseIdRoute: ShowcaseIdRoute,
+}
 
 const ShowcaseRouteWithChildren = ShowcaseRoute._addFileChildren(
-	ShowcaseRouteChildren,
-);
+  ShowcaseRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
-	IndexRoute: IndexRoute,
-	R404Route: R404Route,
-	AboutRoute: AboutRoute,
-	CaraGabungRoute: CaraGabungRoute,
-	EventRoute: EventRouteWithChildren,
-	ForumRoute: ForumRouteWithChildren,
-	FreelanceRoute: FreelanceRouteWithChildren,
-	KolaboratorRoute: KolaboratorRoute,
-	LombaRoute: LombaRouteWithChildren,
-	MemberRoute: MemberRouteWithChildren,
-	ShowcaseRoute: ShowcaseRouteWithChildren,
-};
+  IndexRoute: IndexRoute,
+  R404Route: R404Route,
+  AboutRoute: AboutRoute,
+  CaraGabungRoute: CaraGabungRoute,
+  EventRoute: EventRouteWithChildren,
+  ForumRoute: ForumRouteWithChildren,
+  FreelanceRoute: FreelanceRouteWithChildren,
+  KolaboratorRoute: KolaboratorRoute,
+  LombaRoute: LombaRouteWithChildren,
+  MemberRoute: MemberRouteWithChildren,
+  ShowcaseRoute: ShowcaseRouteWithChildren,
+}
 export const routeTree = rootRouteImport
-	._addFileChildren(rootRouteChildren)
-	._addFileTypes<FileRouteTypes>();
+  ._addFileChildren(rootRouteChildren)
+  ._addFileTypes<FileRouteTypes>()

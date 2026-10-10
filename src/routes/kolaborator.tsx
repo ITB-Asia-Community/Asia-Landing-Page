@@ -12,6 +12,7 @@ import { CardSkeleton } from "@/components/shared/CardSkeleton";
 import { EmptyState } from "@/components/shared/EmptyState";
 import { ErrorState } from "@/components/shared/ErrorState";
 import { FilterBar } from "@/components/shared/FilterBar";
+import { FilterToolbar } from "@/components/shared/FilterToolbar";
 import { PageShell } from "@/components/shared/PageShell";
 import { StaggerGrid } from "@/components/shared/StaggerGrid";
 import { Tag } from "@/components/shared/Tag";
@@ -63,9 +64,8 @@ function KolaboratorPage() {
 		<PageShell
 			title="Cari Kolaborator"
 			description="Filter member berdasarkan skill dan jurusan, lalu hubungi via WhatsApp."
-			crumbs={[{ label: "Home", to: "/" }, { label: "Kolaborator" }]}
 		>
-			<div className="mb-6 flex flex-col gap-3 sm:flex-row">
+			<FilterToolbar>
 				<FilterBar
 					categories={jurusanOptions}
 					value={jurusan}
@@ -78,7 +78,7 @@ function KolaboratorPage() {
 					onChange={setSkill}
 					placeholder="Semua skill"
 				/>
-			</div>
+			</FilterToolbar>
 			{query.isLoading ? (
 				<CardSkeleton />
 			) : query.isError ? (
@@ -97,7 +97,10 @@ function KolaboratorPage() {
 					{matched.map((item) => {
 						const wa = MEMBER_WA[item.id] ?? "6281234567890";
 						return (
-							<Card key={item.id} className="h-full">
+							<Card
+								key={item.id}
+								className="h-full transition-colors hover:bg-muted/30"
+							>
 								<CardHeader className="flex flex-row items-center gap-3">
 									<Avatar>
 										<AvatarFallback>

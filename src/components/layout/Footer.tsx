@@ -1,9 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import {
 	COMMUNITY_NAME,
-	NAV_LINKS,
+	FOOTER_LINKS,
+	KAMPUS,
 	TAGLINE,
 	WA_GROUP_LINK,
 } from "@/lib/constants";
@@ -12,48 +12,76 @@ export function Footer() {
 	const year = new Date().getFullYear();
 
 	return (
-		<footer className="mt-auto border-t border-border/60 bg-background">
-			<div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-10">
-				<div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-					<div className="max-w-sm space-y-2">
+		<footer className="mt-auto border-t border-border bg-muted/40">
+			<div className="mx-auto grid max-w-6xl gap-12 px-4 py-14 md:grid-cols-[1.5fr_1fr_1fr]">
+				<div>
+					<Link to="/" className="inline-flex items-center gap-2.5">
+						<span className="flex size-8 items-center justify-center rounded-md bg-foreground text-[11px] font-semibold tracking-tight text-background">
+							IA
+						</span>
 						<p className="font-heading text-sm font-semibold">
 							{COMMUNITY_NAME}
 						</p>
-						<p className="text-sm text-muted-foreground">{TAGLINE}</p>
-					</div>
-					<div className="flex flex-wrap gap-x-4 gap-y-2">
-						{NAV_LINKS.map((item) => (
-							<Link
-								key={item.to}
-								to={item.to}
-								className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-							>
-								{item.label}
-							</Link>
-						))}
-						<Link
-							to="/kolaborator"
-							className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-						>
-							Kolaborator
-						</Link>
-						<Link
-							to="/cara-gabung"
-							className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-						>
-							Cara Gabung
-						</Link>
-					</div>
-					<Button asChild>
+					</Link>
+					<p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
+						{TAGLINE}
+					</p>
+					<p className="mt-1 text-xs text-muted-foreground">{KAMPUS}</p>
+					<Button asChild size="sm" className="mt-5">
 						<a href={WA_GROUP_LINK} target="_blank" rel="noreferrer">
 							Gabung Komunitas
 						</a>
 					</Button>
 				</div>
-				<Separator />
-				<p className="text-xs text-muted-foreground">
-					Copyright {year} {COMMUNITY_NAME}. All rights reserved.
-				</p>
+				<div>
+					<p className="mb-4 text-[11px] font-medium tracking-[0.16em] text-muted-foreground uppercase">
+						Jelajahi
+					</p>
+					<ul className="space-y-2.5">
+						{FOOTER_LINKS.jelajahi.map((item) => (
+							<li key={item.to}>
+								<Link
+									to={item.to}
+									className="text-sm text-foreground/70 transition-colors hover:text-foreground"
+								>
+									{item.label}
+								</Link>
+							</li>
+						))}
+					</ul>
+				</div>
+				<div>
+					<p className="mb-4 text-[11px] font-medium tracking-[0.16em] text-muted-foreground uppercase">
+						Komunitas
+					</p>
+					<ul className="space-y-2.5">
+						{FOOTER_LINKS.komunitas.map((item) => (
+							<li key={item.to}>
+								<Link
+									to={item.to}
+									className="text-sm text-foreground/70 transition-colors hover:text-foreground"
+								>
+									{item.label}
+								</Link>
+							</li>
+						))}
+					</ul>
+				</div>
+			</div>
+			<div className="border-t border-border/80">
+				<div className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-4 sm:flex-row sm:items-center sm:justify-between">
+					<p className="text-xs text-muted-foreground">
+						Copyright {year} {COMMUNITY_NAME}
+					</p>
+					<span className="flex gap-5">
+						<p className="text-xs text-muted-foreground">
+							Privacy Policy
+						</p>
+						<p className="text-xs text-muted-foreground">
+							Terms of Service
+						</p>
+					</span>
+				</div>
 			</div>
 		</footer>
 	);

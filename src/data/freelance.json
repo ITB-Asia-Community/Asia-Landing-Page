@@ -6,7 +6,8 @@
 		"tag": ["logo", "branding"],
 		"deskripsi": "Butuh logo simpel untuk brand kopi lokal. Budget negotiable.",
 		"kontak": "6281234567890",
-		"deadline": "2026-11-15"
+		"deadline": "2026-11-15",
+		"gambar": "https://placehold.co/800x500/1a1a1a/ffffff?text=Logo+Kopi"
 	},
 	{
 		"id": "fl-002",
@@ -15,7 +16,8 @@
 		"tag": ["react", "tailwind"],
 		"deskripsi": "Landing page 1 halaman untuk fotografer.",
 		"kontak": "6281234567891",
-		"deadline": "2026-11-20"
+		"deadline": "2026-11-20",
+		"gambar": "https://placehold.co/800x500/1a1a1a/ffffff?text=Landing+Page"
 	},
 	{
 		"id": "fl-003",
@@ -24,7 +26,8 @@
 		"tag": ["blog", "ai"],
 		"deskripsi": "5 artikel @800 kata per bulan.",
 		"kontak": "6281234567892",
-		"deadline": "2026-11-30"
+		"deadline": "2026-11-30",
+		"gambar": "https://placehold.co/800x500/1a1a1a/ffffff?text=Konten+Blog"
 	},
 	{
 		"id": "fl-004",
@@ -33,6 +36,7 @@
 		"tag": ["video", "editing"],
 		"deskripsi": "Edit 10 reels pendek untuk UMKM fashion.",
 		"kontak": "6281234567893",
-		"deadline": "2026-11-25"
+		"deadline": "2026-11-25",
+		"gambar": "https://placehold.co/800x500/1a1a1a/ffffff?text=Video+Reels"
 	}
 ]

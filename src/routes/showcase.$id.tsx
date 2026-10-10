@@ -28,13 +28,7 @@ function ShowcaseDetailPage() {
 
 	if (query.isLoading) {
 		return (
-			<PageShell
-				title="Memuat..."
-				crumbs={[
-					{ label: "Home", to: "/" },
-					{ label: "Showcase", to: "/showcase" },
-				]}
-			>
+			<PageShell title="Memuat...">
 				<p className="text-sm text-muted-foreground">Memuat project...</p>
 			</PageShell>
 		);
@@ -42,13 +36,7 @@ function ShowcaseDetailPage() {
 
 	if (query.isError) {
 		return (
-			<PageShell
-				title="Showcase"
-				crumbs={[
-					{ label: "Home", to: "/" },
-					{ label: "Showcase", to: "/showcase" },
-				]}
-			>
+			<PageShell title="Showcase">
 				<ErrorState onRetry={() => void query.refetch()} />
 			</PageShell>
 		);
@@ -56,13 +44,7 @@ function ShowcaseDetailPage() {
 
 	if (!item) {
 		return (
-			<PageShell
-				title="Tidak ditemukan"
-				crumbs={[
-					{ label: "Home", to: "/" },
-					{ label: "Showcase", to: "/showcase" },
-				]}
-			>
+			<PageShell title="Tidak ditemukan">
 				<ErrorState
 					title="Project tidak ditemukan"
 					description="Item ini tidak ada di data dummy."
@@ -75,11 +57,6 @@ function ShowcaseDetailPage() {
 		<PageShell
 			title={item.judul}
 			description={item.deskripsi}
-			crumbs={[
-				{ label: "Home", to: "/" },
-				{ label: "Showcase", to: "/showcase" },
-				{ label: item.judul },
-			]}
 			actions={<ShareButton title={item.judul} />}
 		>
 			<Card>

@@ -1,17 +1,11 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardHeader,
-	CardTitle,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CardSkeleton } from "@/components/shared/CardSkeleton";
 import { EmptyState } from "@/components/shared/EmptyState";
 import { ErrorState } from "@/components/shared/ErrorState";
 import { EventCalendar } from "@/components/shared/EventCalendar";
 import { FilterBar } from "@/components/shared/FilterBar";
+import { FilterToolbar } from "@/components/shared/FilterToolbar";
 import { PageShell } from "@/components/shared/PageShell";
 import { Pagination } from "@/components/shared/Pagination";
 import { SearchBar } from "@/components/shared/SearchBar";
@@ -47,7 +41,6 @@ function EventPage() {
 		<PageShell
 			title="Event"
 			description="Workshop, meetup, dan webinar. Tanggal bertanda di kalender punya event."
-			crumbs={[{ label: "Home", to: "/" }, { label: "Event" }]}
 		>
 			{query.isLoading ? (
 				<CardSkeleton count={3} />
@@ -58,7 +51,7 @@ function EventPage() {
 					<div className="mb-8">
 						<EventCalendar events={data} />
 					</div>
-					<div className="mb-6 flex flex-col gap-3 sm:flex-row">
+					<FilterToolbar>
 						<SearchBar value={search.query} onChange={search.setQuery} />
 						<FilterBar
 							categories={search.categories}
@@ -73,7 +66,7 @@ function EventPage() {
 								{ value: "terbaru", label: "Terbaru" },
 							]}
 						/>
-					</div>
+					</FilterToolbar>
 					{search.total === 0 ? (
 						<EmptyState
 							description="Tidak ada event yang cocok."
@@ -93,19 +86,30 @@ function EventPage() {
 										params={{ id: item.id }}
 										className="block h-full"
 									>
-										<Card className="h-full transition-colors hover:bg-muted/40">
-											<CardHeader>
-												<Badge variant="secondary">
-													{item.kategori}
-												</Badge>
-												<CardTitle>{item.judul}</CardTitle>
-												<CardDescription>
-													{formatDate(item.tanggal)} ·{" "}
-													{item.lokasi}
-												</CardDescription>
+										<Card className="h-full overflow-hidden py-0 transition-colors hover:bg-muted/30">
+											<img
+												src={item.gambar}
+												alt={item.judul}
+												className="aspect-[16/10] w-full object-cover"
+											/>
+											<CardHeader className="gap-2 pt-4">
+												<div className="flex items-center justify-between gap-3">
+													<span className="text-[11px] font-medium tracking-wide text-muted-foreground uppercase">
+														{item.kategori}
+													</span>
+													<span className="text-xs tabular-nums text-muted-foreground">
+														{formatDate(item.tanggal)}
+													</span>
+												</div>
+												<CardTitle className="line-clamp-2 text-[15px] leading-snug">
+													{item.judul}
+												</CardTitle>
 											</CardHeader>
-											<CardContent>
-												<div className="flex flex-wrap gap-1">
+											<CardContent className="mt-auto space-y-3 pb-5">
+												<p className="text-sm leading-relaxed text-muted-foreground">
+													{item.lokasi}
+												</p>
+												<div className="flex flex-wrap gap-1.5">
 													{item.tag.map((tag) => (
 														<Tag key={tag} label={tag} />
 													))}
@@ -115,7 +119,7 @@ function EventPage() {
 									</Link>
 								))}
 							</StaggerGrid>
-							<div className="mt-8">
+							<div className="mt-10">
 								<Pagination
 									page={search.page}
 									totalPages={search.totalPages}

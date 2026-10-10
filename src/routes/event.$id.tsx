@@ -16,6 +16,7 @@ export const Route = createFileRoute("/event/$id")({
 		return pageHead(
 			item?.judul ?? "Event tidak ditemukan",
 			item?.deskripsi ?? "Detail event ITB Asia Community.",
+			item?.gambar,
 		);
 	},
 	component: EventDetailPage,
@@ -28,13 +29,7 @@ function EventDetailPage() {
 
 	if (query.isLoading) {
 		return (
-			<PageShell
-				title="Memuat..."
-				crumbs={[
-					{ label: "Home", to: "/" },
-					{ label: "Event", to: "/event" },
-				]}
-			>
+			<PageShell title="Memuat...">
 				<p className="text-sm text-muted-foreground">
 					Memuat detail event...
 				</p>
@@ -44,13 +39,7 @@ function EventDetailPage() {
 
 	if (query.isError) {
 		return (
-			<PageShell
-				title="Event"
-				crumbs={[
-					{ label: "Home", to: "/" },
-					{ label: "Event", to: "/event" },
-				]}
-			>
+			<PageShell title="Event">
 				<ErrorState onRetry={() => void query.refetch()} />
 			</PageShell>
 		);
@@ -58,13 +47,7 @@ function EventDetailPage() {
 
 	if (!item) {
 		return (
-			<PageShell
-				title="Tidak ditemukan"
-				crumbs={[
-					{ label: "Home", to: "/" },
-					{ label: "Event", to: "/event" },
-				]}
-			>
+			<PageShell title="Tidak ditemukan">
 				<ErrorState
 					title="Event tidak ditemukan"
 					description="Item ini tidak ada di data dummy."
@@ -77,18 +60,18 @@ function EventDetailPage() {
 		<PageShell
 			title={item.judul}
 			description={item.deskripsi}
-			crumbs={[
-				{ label: "Home", to: "/" },
-				{ label: "Event", to: "/event" },
-				{ label: item.judul },
-			]}
 			actions={<ShareButton title={item.judul} />}
 		>
-			<Card>
-				<CardHeader className="flex flex-row flex-wrap items-center gap-2">
+			<Card className="overflow-hidden py-0">
+				<img
+					src={item.gambar}
+					alt={item.judul}
+					className="aspect-[16/8] w-full object-cover"
+				/>
+				<CardHeader className="flex flex-row flex-wrap items-center gap-2 pt-5">
 					<Badge variant="secondary">{item.kategori}</Badge>
 				</CardHeader>
-				<CardContent className="space-y-4">
+				<CardContent className="space-y-4 pb-6">
 					<p className="text-sm text-muted-foreground">
 						{formatDate(item.tanggal)} · {item.lokasi}
 					</p>

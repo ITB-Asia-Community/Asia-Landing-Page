@@ -14,13 +14,25 @@ export const MEMBER_WA: Record<string, string> = {
 	"mbr-004": "6281234567893",
 };
 
-export const NAV_LINKS: { to: string; label: string }[] = [
+export const NAV_LINKS = [
 	{ to: "/", label: "Home" },
 	{ to: "/freelance", label: "Freelance" },
 	{ to: "/lomba", label: "Lomba" },
 	{ to: "/event", label: "Event" },
-	{ to: "/forum", label: "Forum" },
 	{ to: "/showcase", label: "Showcase" },
 	{ to: "/member", label: "Member" },
-	{ to: "/about", label: "About" },
-];
+] as const;
+
+export const FOOTER_LINKS = {
+	jelajahi: [
+		{ to: "/freelance", label: "Freelance" },
+		{ to: "/lomba", label: "Lomba" },
+		{ to: "/event", label: "Event" },
+		{ to: "/showcase", label: "Showcase" },
+		{ to: "/member", label: "Member" },
+	],
+	komunitas: [
+		{ to: "/kolaborator", label: "Kolaborator" },
+		{ to: "/cara-gabung", label: "Cara Gabung" },
+	],
+} as const;

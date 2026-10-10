@@ -21,7 +21,7 @@ export function SortSelect({ value, onChange, options }: SortSelectProps) {
 	return (
 		<Select value={value} onValueChange={onChange}>
 			<SelectTrigger
-				className="w-full min-w-40 sm:w-48"
+				className="h-11 w-full min-w-0 rounded-none border-0 bg-transparent px-3 shadow-none dark:bg-transparent"
 				aria-label="Urutkan"
 			>
 				<SelectValue placeholder="Urutkan" />

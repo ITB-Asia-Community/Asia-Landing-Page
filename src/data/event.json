@@ -6,7 +6,8 @@
 		"lokasi": "Online (Zoom)",
 		"kategori": "Workshop",
 		"tag": ["freelance", "karier"],
-		"deskripsi": "Belajar mulai freelance dari nol."
+		"deskripsi": "Belajar mulai freelance dari nol.",
+		"gambar": "https://placehold.co/800x500/1a1a1a/ffffff?text=Workshop+Freelance"
 	},
 	{
 		"id": "ev-002",
@@ -15,7 +16,8 @@
 		"lokasi": "Kafe Kopi Senja, Malang",
 		"kategori": "Meetup",
 		"tag": ["networking"],
-		"deskripsi": "Ngobrol santai bareng member komunitas."
+		"deskripsi": "Ngobrol santai bareng member komunitas.",
+		"gambar": "https://placehold.co/800x500/1a1a1a/ffffff?text=Meetup+Komunitas"
 	},
 	{
 		"id": "ev-003",
@@ -24,7 +26,8 @@
 		"lokasi": "Online (Google Meet)",
 		"kategori": "Webinar",
 		"tag": ["startup"],
-		"deskripsi": "Narasumber: founder startup kampus."
+		"deskripsi": "Narasumber: founder startup kampus.",
+		"gambar": "https://placehold.co/800x500/1a1a1a/ffffff?text=Webinar+Startup"
 	},
 	{
 		"id": "ev-004",
@@ -33,6 +36,7 @@
 		"lokasi": "Lab Komputer ITB Asia",
 		"kategori": "Workshop",
 		"tag": ["git", "coding"],
-		"deskripsi": "Belajar kolaborasi kode dengan Git."
+		"deskripsi": "Belajar kolaborasi kode dengan Git.",
+		"gambar": "https://placehold.co/800x500/1a1a1a/ffffff?text=Workshop+Git"
 	}
 ]

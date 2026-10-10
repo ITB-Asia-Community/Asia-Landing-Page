@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export function NotFound() {
 	return (
-		<div className="mx-auto flex min-h-[60vh] max-w-6xl flex-col items-center justify-center gap-4 px-4 text-center">
+		<div className="mx-auto flex min-h-[60vh] max-w-6xl flex-col items-center justify-center gap-4 px-4 pt-16 text-center">
 			<p className="text-sm text-muted-foreground">404</p>
 			<h1 className="font-heading text-2xl font-semibold">
 				Halaman tidak ditemukan

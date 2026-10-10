@@ -13,14 +13,14 @@ export function SearchBar({
 	placeholder = "Cari judul atau deskripsi...",
 }: SearchBarProps) {
 	return (
-		<div className="relative w-full max-w-md">
-			<Search className="pointer-events-none absolute top-1/2 left-2.5 size-4 -translate-y-1/2 text-muted-foreground" />
+		<div className="relative min-w-0 w-full">
+			<Search className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground" />
 			<Input
 				type="search"
 				value={value}
 				onChange={(event) => onChange(event.target.value)}
 				placeholder={placeholder}
-				className="pl-8"
+				className="h-full w-full rounded-none border-0 bg-transparent pr-3 pl-9 shadow-none focus-visible:ring-0 dark:bg-transparent"
 				aria-label="Pencarian"
 			/>
 		</div>

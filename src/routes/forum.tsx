@@ -9,6 +9,7 @@ import {
 import { CardSkeleton } from "@/components/shared/CardSkeleton";
 import { EmptyState } from "@/components/shared/EmptyState";
 import { ErrorState } from "@/components/shared/ErrorState";
+import { FilterToolbar } from "@/components/shared/FilterToolbar";
 import { PageShell } from "@/components/shared/PageShell";
 import { Pagination } from "@/components/shared/Pagination";
 import { SearchBar } from "@/components/shared/SearchBar";
@@ -45,9 +46,8 @@ function ForumPage() {
 		<PageShell
 			title="Forum"
 			description="Thread diskusi komunitas. Urutkan terbaru atau reply terbanyak."
-			crumbs={[{ label: "Home", to: "/" }, { label: "Forum" }]}
 		>
-			<div className="mb-6 flex flex-col gap-3 sm:flex-row">
+			<FilterToolbar>
 				<SearchBar
 					value={search.query}
 					onChange={search.setQuery}
@@ -61,7 +61,7 @@ function ForumPage() {
 						{ value: "reply", label: "Reply terbanyak" },
 					]}
 				/>
-			</div>
+			</FilterToolbar>
 			{query.isLoading ? (
 				<CardSkeleton />
 			) : query.isError ? (
@@ -78,7 +78,7 @@ function ForumPage() {
 						{search.results.map((item) => (
 							<Card
 								key={item.id}
-								className="h-full transition-colors hover:bg-muted/40"
+								className="h-full transition-colors hover:bg-muted/30"
 							>
 								<CardHeader>
 									<CardTitle>

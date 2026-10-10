@@ -59,12 +59,17 @@ export function EventCalendar({ events }: EventCalendarProps) {
 
 	const totalDays = daysInMonth(cursor.y, cursor.m);
 	const offset = mondayIndex(cursor.y, cursor.m);
-	const cells = Array.from({ length: offset + totalDays }, (_, index) => {
-		if (index < offset) {
-			return null;
-		}
-		return index - offset + 1;
-	});
+	const remainder = (offset + totalDays) % 7;
+	const trailing = remainder === 0 ? 0 : 7 - remainder;
+	const cells = Array.from(
+		{ length: offset + totalDays + trailing },
+		(_, index) => {
+			if (index < offset || index >= offset + totalDays) {
+				return null;
+			}
+			return index - offset + 1;
+		},
+	);
 
 	function shift(delta: number) {
 		setCursor((current) => {
@@ -80,8 +85,8 @@ export function EventCalendar({ events }: EventCalendarProps) {
 	}
 
 	return (
-		<div className="rounded-xl border border-border p-4">
-			<div className="mb-3 flex items-center justify-between">
+		<div className="mx-auto w-full overflow-hidden rounded-xl border border-border bg-card">
+			<div className="flex items-center justify-between border-b border-border px-4 py-3">
 				<p className="font-heading text-sm font-medium">
 					{MONTHS[cursor.m - 1]} {cursor.y}
 				</p>
@@ -106,15 +111,25 @@ export function EventCalendar({ events }: EventCalendarProps) {
 					</Button>
 				</div>
 			</div>
-			<div className="grid grid-cols-7 gap-1 text-center text-xs text-muted-foreground">
+			<div className="grid grid-cols-7 border-b border-border text-center text-xs text-muted-foreground">
 				{WEEKDAYS.map((day) => (
-					<div key={day} className="py-1 font-medium">
+					<div
+						key={day}
+						className="border-r border-border py-2 font-medium nth-[7n]:border-r-0"
+					>
 						{day}
 					</div>
 				))}
+			</div>
+			<div className="grid grid-cols-7">
 				{cells.map((day, index) => {
 					if (day === null) {
-						return <div key={`empty-${index}`} />;
+						return (
+							<div
+								key={`empty-${index}`}
+								className="aspect-square border-r border-b border-border bg-muted/30 nth-[7n]:border-r-0"
+							/>
+						);
 					}
 					const marked = eventDays.has(day);
 					const titles = eventDays
@@ -126,8 +141,10 @@ export function EventCalendar({ events }: EventCalendarProps) {
 							key={day}
 							title={titles}
 							className={cn(
-								"flex aspect-square items-center justify-center rounded-md text-foreground",
-								marked && "bg-foreground text-background",
+								"flex aspect-square items-center justify-center border-r border-b border-border text-sm nth-[7n]:border-r-0",
+								marked
+									? "bg-foreground font-medium text-background"
+									: "bg-card text-foreground",
 							)}
 						>
 							{day}

@@ -4,7 +4,7 @@ import {
 	createRootRoute,
 	useRouterState,
 } from "@tanstack/react-router";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import { NotFound } from "@/components/layout/NotFound";
@@ -20,17 +20,15 @@ function RootLayout() {
 			<HeadContent />
 			<Navbar />
 			<main className="flex-1">
-				<AnimatePresence mode="wait">
-					<motion.div
-						key={pathname}
-						initial={{ opacity: 0, y: 12 }}
-						animate={{ opacity: 1, y: 0 }}
-						exit={{ opacity: 0, y: -8 }}
-						transition={{ duration: 0.25, ease: "easeOut" }}
-					>
-						<Outlet />
-					</motion.div>
-				</AnimatePresence>
+				<motion.div
+					key={pathname}
+					initial={{ opacity: 0, y: 12 }}
+					animate={{ opacity: 1, y: 0 }}
+					exit={{ opacity: 0, y: -8 }}
+					transition={{ duration: 0.25, ease: "easeOut" }}
+				>
+					<Outlet />
+				</motion.div>
 			</main>
 			<Footer />
 		</div>

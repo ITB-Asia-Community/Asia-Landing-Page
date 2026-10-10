@@ -7,7 +7,8 @@
 		"tag": ["coding", "nasional"],
 		"deadline": "2026-11-10",
 		"link": "https://example.com/hackathon",
-		"deskripsi": "Kompetisi coding 48 jam mahasiswa Indonesia."
+		"deskripsi": "Kompetisi coding 48 jam mahasiswa Indonesia.",
+		"gambar": "https://placehold.co/800x500/1a1a1a/ffffff?text=Hackathon"
 	},
 	{
 		"id": "lb-002",
@@ -17,7 +18,8 @@
 		"tag": ["poster", "digital"],
 		"deadline": "2026-11-25",
 		"link": "https://example.com/poster",
-		"deskripsi": "Tema: Sustainable Future. Hadiah 10 juta."
+		"deskripsi": "Tema: Sustainable Future. Hadiah 10 juta.",
+		"gambar": "https://placehold.co/800x500/1a1a1a/ffffff?text=Poster+Digital"
 	},
 	{
 		"id": "lb-003",
@@ -27,7 +29,8 @@
 		"tag": ["startup", "bisnis"],
 		"deadline": "2026-12-05",
 		"link": "https://example.com/bpc",
-		"deskripsi": "Kompetisi rencana bisnis mahasiswa."
+		"deskripsi": "Kompetisi rencana bisnis mahasiswa.",
+		"gambar": "https://placehold.co/800x500/1a1a1a/ffffff?text=Business+Plan"
 	},
 	{
 		"id": "lb-004",
@@ -37,6 +40,7 @@
 		"tag": ["ui", "ux"],
 		"deadline": "2026-11-18",
 		"link": "https://example.com/uiux",
-		"deskripsi": "Redesign aplikasi transportasi publik."
+		"deskripsi": "Redesign aplikasi transportasi publik.",
+		"gambar": "https://placehold.co/800x500/1a1a1a/ffffff?text=UI+UX+Challenge"
 	}
 ]

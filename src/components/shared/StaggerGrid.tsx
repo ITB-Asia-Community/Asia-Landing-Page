@@ -20,8 +20,8 @@ export function StaggerGrid({ className, children }: StaggerGridProps) {
 				<motion.div
 					key={index}
 					variants={fadeUp}
-					whileHover={{ scale: 1.02 }}
-					transition={{ duration: 0.15 }}
+					whileHover={{ y: -2 }}
+					transition={{ duration: 0.2 }}
 					className="h-full"
 				>
 					{child}

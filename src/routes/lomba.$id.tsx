@@ -17,6 +17,7 @@ export const Route = createFileRoute("/lomba/$id")({
 		return pageHead(
 			item?.judul ?? "Lomba tidak ditemukan",
 			item?.deskripsi ?? "Detail lomba ITB Asia Community.",
+			item?.gambar,
 		);
 	},
 	component: LombaDetailPage,
@@ -29,13 +30,7 @@ function LombaDetailPage() {
 
 	if (query.isLoading) {
 		return (
-			<PageShell
-				title="Memuat..."
-				crumbs={[
-					{ label: "Home", to: "/" },
-					{ label: "Lomba", to: "/lomba" },
-				]}
-			>
+			<PageShell title="Memuat...">
 				<p className="text-sm text-muted-foreground">
 					Memuat detail lomba...
 				</p>
@@ -45,13 +40,7 @@ function LombaDetailPage() {
 
 	if (query.isError) {
 		return (
-			<PageShell
-				title="Lomba"
-				crumbs={[
-					{ label: "Home", to: "/" },
-					{ label: "Lomba", to: "/lomba" },
-				]}
-			>
+			<PageShell title="Lomba">
 				<ErrorState onRetry={() => void query.refetch()} />
 			</PageShell>
 		);
@@ -59,13 +48,7 @@ function LombaDetailPage() {
 
 	if (!item) {
 		return (
-			<PageShell
-				title="Tidak ditemukan"
-				crumbs={[
-					{ label: "Home", to: "/" },
-					{ label: "Lomba", to: "/lomba" },
-				]}
-			>
+			<PageShell title="Tidak ditemukan">
 				<ErrorState
 					title="Lomba tidak ditemukan"
 					description="Item ini tidak ada di data dummy."
@@ -78,18 +61,18 @@ function LombaDetailPage() {
 		<PageShell
 			title={item.judul}
 			description={item.deskripsi}
-			crumbs={[
-				{ label: "Home", to: "/" },
-				{ label: "Lomba", to: "/lomba" },
-				{ label: item.judul },
-			]}
 			actions={<ShareButton title={item.judul} />}
 		>
-			<Card>
-				<CardHeader className="flex flex-row flex-wrap items-center gap-2">
+			<Card className="overflow-hidden py-0">
+				<img
+					src={item.gambar}
+					alt={item.judul}
+					className="aspect-[16/8] w-full object-cover"
+				/>
+				<CardHeader className="flex flex-row flex-wrap items-center gap-2 pt-5">
 					<Badge variant="secondary">{item.kategori}</Badge>
 				</CardHeader>
-				<CardContent className="space-y-4">
+				<CardContent className="space-y-4 pb-6">
 					<p className="text-sm text-muted-foreground">
 						Penyelenggara: {item.penyelenggara}
 					</p>

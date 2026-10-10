@@ -6,12 +6,7 @@ import { ErrorState } from "@/components/shared/ErrorState";
 import { PageShell } from "@/components/shared/PageShell";
 import { ShareButton } from "@/components/shared/ShareButton";
 import { Tag } from "@/components/shared/Tag";
-import {
-	memberList,
-	useForum,
-	useMemberById,
-	useShowcase,
-} from "@/lib/queries";
+import { memberList, useMemberById, useShowcase } from "@/lib/queries";
 import { pageHead } from "@/lib/seo";
 
 function initials(nama: string): string {
@@ -37,25 +32,15 @@ export const Route = createFileRoute("/member/$id")({
 function MemberDetailPage() {
 	const { id } = Route.useParams();
 	const query = useMemberById(id);
-	const forumQuery = useForum();
 	const showcaseQuery = useShowcase();
 	const item = query.data;
-	const threads = (forumQuery.data ?? []).filter(
-		(thread) => thread.author === id,
-	);
 	const projects = (showcaseQuery.data ?? []).filter(
 		(project) => project.pembuat === id,
 	);
 
 	if (query.isLoading) {
 		return (
-			<PageShell
-				title="Memuat..."
-				crumbs={[
-					{ label: "Home", to: "/" },
-					{ label: "Member", to: "/member" },
-				]}
-			>
+			<PageShell title="Memuat...">
 				<p className="text-sm text-muted-foreground">Memuat profil...</p>
 			</PageShell>
 		);
@@ -63,13 +48,7 @@ function MemberDetailPage() {
 
 	if (query.isError) {
 		return (
-			<PageShell
-				title="Member"
-				crumbs={[
-					{ label: "Home", to: "/" },
-					{ label: "Member", to: "/member" },
-				]}
-			>
+			<PageShell title="Member">
 				<ErrorState onRetry={() => void query.refetch()} />
 			</PageShell>
 		);
@@ -77,13 +56,7 @@ function MemberDetailPage() {
 
 	if (!item) {
 		return (
-			<PageShell
-				title="Tidak ditemukan"
-				crumbs={[
-					{ label: "Home", to: "/" },
-					{ label: "Member", to: "/member" },
-				]}
-			>
+			<PageShell title="Tidak ditemukan">
 				<ErrorState
 					title="Member tidak ditemukan"
 					description="Profil ini tidak ada di data dummy."
@@ -96,11 +69,6 @@ function MemberDetailPage() {
 		<PageShell
 			title={item.nama}
 			description={item.bio}
-			crumbs={[
-				{ label: "Home", to: "/" },
-				{ label: "Member", to: "/member" },
-				{ label: item.nama },
-			]}
 			actions={<ShareButton title={item.nama} />}
 		>
 			<div className="grid gap-6 lg:grid-cols-[1fr_1.4fr]">
@@ -142,30 +110,6 @@ function MemberDetailPage() {
 					</CardContent>
 				</Card>
 				<div className="space-y-6">
-					<section>
-						<h2 className="mb-3 font-heading text-sm font-semibold">
-							Thread forum
-						</h2>
-						{threads.length === 0 ? (
-							<p className="text-sm text-muted-foreground">
-								Belum ada thread.
-							</p>
-						) : (
-							<ul className="space-y-2">
-								{threads.map((thread) => (
-									<li key={thread.id}>
-										<Link
-											to="/forum/$id"
-											params={{ id: thread.id }}
-											className="text-sm underline-offset-4 hover:underline"
-										>
-											{thread.judul}
-										</Link>
-									</li>
-								))}
-							</ul>
-						)}
-					</section>
 					<section>
 						<h2 className="mb-3 font-heading text-sm font-semibold">
 							Project showcase

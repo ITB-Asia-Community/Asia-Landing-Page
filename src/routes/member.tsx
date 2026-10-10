@@ -1,16 +1,11 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardHeader,
-	CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CardSkeleton } from "@/components/shared/CardSkeleton";
 import { EmptyState } from "@/components/shared/EmptyState";
 import { ErrorState } from "@/components/shared/ErrorState";
 import { FilterBar } from "@/components/shared/FilterBar";
+import { FilterToolbar } from "@/components/shared/FilterToolbar";
 import { PageShell } from "@/components/shared/PageShell";
 import { Pagination } from "@/components/shared/Pagination";
 import { SearchBar } from "@/components/shared/SearchBar";
@@ -47,9 +42,8 @@ function MemberPage() {
 		<PageShell
 			title="Member"
 			description="Direktori member komunitas. Cari nama dan filter jurusan."
-			crumbs={[{ label: "Home", to: "/" }, { label: "Member" }]}
 		>
-			<div className="mb-6 flex flex-col gap-3 sm:flex-row">
+			<FilterToolbar>
 				<SearchBar
 					value={search.query}
 					onChange={search.setQuery}
@@ -61,7 +55,7 @@ function MemberPage() {
 					onChange={search.setCategory}
 					placeholder="Semua jurusan"
 				/>
-			</div>
+			</FilterToolbar>
 			{query.isLoading ? (
 				<CardSkeleton />
 			) : query.isError ? (
@@ -85,22 +79,24 @@ function MemberPage() {
 								params={{ id: item.id }}
 								className="block h-full"
 							>
-								<Card className="h-full transition-colors hover:bg-muted/40">
+								<Card className="h-full transition-colors hover:bg-muted/30">
 									<CardHeader className="flex flex-row items-center gap-3">
 										<Avatar>
 											<AvatarFallback>
 												{initials(item.nama)}
 											</AvatarFallback>
 										</Avatar>
-										<div>
-											<CardTitle>{item.nama}</CardTitle>
-											<CardDescription>
+										<div className="min-w-0">
+											<CardTitle className="truncate text-[15px] leading-snug">
+												{item.nama}
+											</CardTitle>
+											<p className="truncate text-xs text-muted-foreground">
 												{item.jurusan}
-											</CardDescription>
+											</p>
 										</div>
 									</CardHeader>
-									<CardContent>
-										<div className="flex flex-wrap gap-1">
+									<CardContent className="mt-auto">
+										<div className="flex flex-wrap gap-1.5">
 											{item.skill.map((skill) => (
 												<Tag key={skill} label={skill} />
 											))}
@@ -110,7 +106,7 @@ function MemberPage() {
 							</Link>
 						))}
 					</StaggerGrid>
-					<div className="mt-8">
+					<div className="mt-10">
 						<Pagination
 							page={search.page}
 							totalPages={search.totalPages}

@@ -9,7 +9,10 @@ interface TagProps {
 export function Tag({ label, active = false, onClick }: TagProps) {
 	if (!onClick) {
 		return (
-			<Badge variant={active ? "default" : "outline"} className="capitalize">
+			<Badge
+				variant={active ? "default" : "outline"}
+				className="font-normal"
+			>
 				{label}
 			</Badge>
 		);
@@ -24,7 +27,7 @@ export function Tag({ label, active = false, onClick }: TagProps) {
 		>
 			<Badge
 				variant={active ? "default" : "outline"}
-				className="cursor-pointer capitalize"
+				className="cursor-pointer font-normal"
 			>
 				{label}
 			</Badge>

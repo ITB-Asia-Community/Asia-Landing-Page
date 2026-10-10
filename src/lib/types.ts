@@ -6,6 +6,7 @@ export interface Freelance {
 	deskripsi: string;
 	kontak: string;
 	deadline: string;
+	gambar: string;
 }
 
 export interface Lomba {
@@ -17,6 +18,7 @@ export interface Lomba {
 	deadline: string;
 	link: string;
 	deskripsi: string;
+	gambar: string;
 }
 
 export interface Event {
@@ -27,6 +29,7 @@ export interface Event {
 	kategori: string;
 	tag: string[];
 	deskripsi: string;
+	gambar: string;
 }
 
 export interface ForumThread {

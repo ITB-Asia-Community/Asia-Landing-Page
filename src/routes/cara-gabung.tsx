@@ -34,7 +34,7 @@ const steps = [
 	{
 		n: "3",
 		title: "Mulai terlibat",
-		body: "Cek freelance, lomba, event, atau ajak kolaborasi lewat forum dan showcase.",
+		body: "Cek freelance, lomba, event, atau ajak kolaborasi lewat showcase dan member.",
 	},
 ];
 
@@ -66,7 +66,6 @@ function CaraGabungPage() {
 		<PageShell
 			title="Cara Gabung"
 			description="Tiga langkah masuk komunitas, lalu mulai kolaborasi."
-			crumbs={[{ label: "Home", to: "/" }, { label: "Cara Gabung" }]}
 		>
 			<div className="grid gap-4 md:grid-cols-3">
 				{steps.map((step) => (
